@@ -1,10 +1,10 @@
 
 const noteForm = document.querySelector('#note-form');
-const tittle = document.querySelector('#tittle')
+const title = document.querySelector('#title')
 const description = document.querySelector('#description')
 
 noteForm.addEventListener('submit', e => {
     e.preventDefault()
-
-    saveNote(tittle.value, description.value)
+    
+    saveNote(title.value, description.value)
 })

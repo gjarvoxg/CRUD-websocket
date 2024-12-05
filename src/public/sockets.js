@@ -1,9 +1,9 @@
 const socket = io();
 
-const saveNote = (tittle, description) => {
+const saveNote = (title, description) => {
     socket.emit("client:newnote", {
-        tittle,
+        title,
         description
     })
 }
-socket.on('server:newnote', appendNote(notes)) 
+socket.on('server:newnote', appendNote) 

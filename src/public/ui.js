@@ -1,5 +1,13 @@
-const notes = document.querySelector('#notes')
+const notesList = document.querySelector('#notes')
 
 const appendNote = notes => {
-    notesList.innerHTML = `<h1>${notes.title}</h1>`
+
+    notesList.innerHTML += `
+    <div class="card card -body rounded-0">
+        <div>
+            <h1 class="h3 card-title">${notes.title}</h1>
+        </div>
+        <p>${notes.description}</p>
+    </div>
+    `
 }
