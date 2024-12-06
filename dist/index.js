@@ -46,8 +46,8 @@ io.on('connection', function (socket) {
       }
       return note;
     });
+    io.emit('server:loadnotes', notes);
   });
-  io.emit('server:loadnotes', notes);
 });
 server.listen(3000);
 console.log("Server on port", 3000);
