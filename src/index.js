@@ -38,8 +38,8 @@ io.on('connection', (socket)=>{
                 note.title = updatedNote.title;
                 note.description = updatedNote.description
             }return note})   
+        io.emit('server:loadnotes', notes)
     });
-    io.emit('server:loadnotes', notes)
 });
 
 server.listen(3000);
