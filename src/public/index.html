@@ -24,34 +24,7 @@
         </nav>
 
     </header>
-<div class="wrapper">
-    <div id="container-form-login" >
-        <div class="form-box">
-            <h2>Login</h2>
-        <form action="#">
-            <div class="input-box">
-                <span><i class="bi bi-envelope-at-fill"></i></span>
-                <input type="email" name="email" placeholder="someone@card.com" id="email">
-                <label>Email</label>
-            </div>
-            <div class="input-box">
-                <span><i class="bi bi-shield-lock-fill"></i></span>
-                <input type="password" name="password" placeholder="123..." id="password">
-                <label>Password</label>
-            </div>
-            <div class="remember-forgot">
-                <label> <input type="checkbox">Remember me <a href="#">Forgot Password?</a></label>
-            </div>
-            <button class="btn-submit" type="submit"></button>
-            <div class="login-register">
-                <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
-            </div>
-        </form>
-        </div>
-    </div>
-</div>
-
-    <!--
+        <!--
     <div class="container h-100">
         <div  class="row h-100">
             <div id="web-leftside" class="col-md-4 my-auto">
@@ -70,6 +43,69 @@
         </div>
     </div>
 -->
+<div class="wrapper">
+    <div id="container-form-login" >        
+        <div class="form-box">
+            <span class="icon-close">
+                <i class="bi bi-x-lg"></i>
+            </span>
+            <h2>Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span><i class="bi bi-envelope-at-fill"></i></span>
+                <input type="email" name="email" placeholder="">
+                <label>Email:</label>
+            </div>
+            <div class="input-box">
+                <span><i class="bi bi-shield-lock-fill"></i></span>
+                <input type="password" name="password" placeholder="">
+                <label>Password:</label>
+            </div>
+            <div class="remember-forgot">
+                <label> <input type="checkbox">Remember me </label><a href="#">Forgot Password?</a>
+            </div>
+            <button class="btn-submit" type="submit">Login</button>
+            <div class="login-register">
+                <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+            </div>
+        </form>
+        </div>
+    </div>
+    <div id="container-form-register" >        
+        <div class="form-box">
+            <span class="icon-close">
+                <i class="bi bi-x-lg"></i>
+            </span>
+            <h2>Registration</h2>
+        <form action="#"> 
+            <div class="input-box">
+                <span><i class="bi bi-person-fill"></i></span>
+                <input type="text" placeholder="">
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                <span><i class="bi bi-envelope-at-fill"></i></span>
+                <input type="email" name="email" placeholder="">
+                <label>Email:</label>
+            </div>
+            <div class="input-box">
+                <span><i class="bi bi-shield-lock-fill"></i></span>
+                <input type="password" name="password" placeholder="">
+                <label>Password:</label>
+            </div>
+            <div class="remember-forgot">
+                <label> <input type="checkbox"> I agree to the terms & conditions</label>
+            </div>
+            <button class="btn-submit" type="submit">Register</button>
+            <div class="login-register">
+                <p>Already have an account? <a href="#" class="register-link">Login</a></p>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+
 
     <script src="/socket.io/socket.io.min.js"></script>
     <script src="./ui.js"></script>
