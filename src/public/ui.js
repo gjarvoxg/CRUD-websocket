@@ -7,7 +7,7 @@ const noteUI = notes => {
     const div = document.createElement('div')
 
     div.innerHTML = `
-    <div class="card card -body rounded-2 mb-2 animate__animated animate__lightSpeedInLeft">
+    <div class="card card-body rounded-5 mb-2 animate__animated animate__lightSpeedInLeft">
         <div class="d-flex justify-content-between p-2">
             <h1 class="h3 card-title">${notes.title}</h1>
             <div>

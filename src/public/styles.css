@@ -19,20 +19,30 @@ header {
 }
 body{
     padding-top: 100px;
-    background-color: #c0c0c0;
+    background-color: #D9C2A3;
     height: 100vh;
 }
 .wrapper{
     display: flex;
+    position: fixed;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    top: 50%; 
+    left: 50%;
+    padding-top: 10px;
+    transform: translate(-50%, -50%);
+    transform: scale(0);
+    transition: 0.5s;
 }
-.wrapper #container-form-login{
-    display: none;
+
+.wrapper.active-popup{
+    transform: scale(1);
+    animation: rubberBand;
+    animation-duration: 1s;
 }
+
 #container-form-login, #container-form-register{
-    position: relative;
+    position: absolute;
     width: 400px;
     height: 440px;
     background: transparent;
@@ -44,7 +54,22 @@ body{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    transition: .25s ease;
+    z-index: 2;
 }
+#container-form-login{
+    z-index: 2;
+}
+
+#container-form-register{
+    z-index: 1;
+}
+
+#container-form-register.active{
+    height: 480px;
+    z-index: 3;
+}
+
 #container-form-login .form-box{
     width: 100%;
     padding: 40px;
@@ -216,7 +241,7 @@ body{
 .login-register p a:hover{
     text-decoration: underline;
 }
-.icon-close{
+.icon-close, .icon-close-2{
     position:absolute;
     top:0;
     right: 0;
@@ -230,5 +255,4 @@ body{
     align-items: center;
     border-bottom-left-radius: 20px;
     cursor: pointer;
-    z-index: 1;
 }
